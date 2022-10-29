@@ -12,11 +12,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/assets/notes.html"));
+  res.sendFile(path.join(__dirname, "./views/notes.html"));
 });
 
 app.get("/api/notes", (req, res) => {
-  // res.json(path.join(__dirname,'./db/db.json'))
   fs.readFile("./db/db.json", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
@@ -101,7 +100,7 @@ app.delete("/api/notes/:id", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/assets/index.html"));
+  res.sendFile(path.join(__dirname, "./views/index.html"));
 });
 
 app.listen(PORT, () => {
