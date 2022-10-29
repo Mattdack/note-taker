@@ -5,14 +5,15 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const { query } = require("express");
 const PORT = process.env.PORT || 3000;
+const ROOT = { root: path.join(__dirname, './public') };
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "./public")));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/views/notes.html"));
+  res.sendFile("./views/notes.html", ROOT);
 });
 
 app.get("/api/notes", (req, res) => {
@@ -100,7 +101,7 @@ app.delete("/api/notes/:id", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/views/index.html"));
+  res.sendFile("./views/index.html", ROOT);
 });
 
 app.listen(PORT, () => {

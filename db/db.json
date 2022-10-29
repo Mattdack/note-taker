@@ -1,22 +1,7 @@
 [
     {
-        "title": "test-number-two",
-        "text": "test-text-two",
-        "id": "585ba6f8-8f46-4a3e-8989-dd09b42af405"
-    },
-    {
-        "title": "test-number-two",
-        "text": "test-text-two",
-        "id": "d3b5f083-9fab-42ac-8ed4-da422fe33298"
-    },
-    {
-        "title": "test-number-two",
-        "text": "test-text-two",
-        "id": "58348e4f-6095-4119-a127-250319a866e7"
-    },
-    {
-        "title": "test-number-two",
-        "text": "test-text-two",
-        "id": "48fa554c-1330-4732-a2bf-7928f7e8e43d"
+        "title": "First Test",
+        "text": "Testing notes",
+        "id": "622cc332-9738-4a58-b59a-2b181d22e560"
     }
 ]
