@@ -11,8 +11,8 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/notes.html"));
+app.get("/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/views/notes.html"));
 });
 
 app.get("/api/notes", (req, res) => {
@@ -100,7 +100,7 @@ app.delete("/api/notes/:id", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/index.html"));
+  res.sendFile(path.join(__dirname, "./public/views/index.html"));
 });
 
 app.listen(PORT, () => {
