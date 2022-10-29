@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/assets/notes.html"));
+  res.sendFile(path.join(__dirname, "/public/assets/notes.html"));
 });
 
 app.get("/api/notes", (req, res) => {
@@ -101,7 +101,7 @@ app.delete("/api/notes/:id", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/assets/index.html"));
+  res.sendFile(path.join(__dirname, "/public/assets/index.html"));
 });
 
 app.listen(PORT, () => {
